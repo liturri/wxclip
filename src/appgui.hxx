@@ -18,6 +18,7 @@ public:
    void LoadClipboard();
 
    void ClickOnAccept(wxCommandEvent &event);
+   void ClickOnHelp(wxCommandEvent &event);
 
    const std::string GetCommand() const
    {
