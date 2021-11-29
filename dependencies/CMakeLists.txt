@@ -3,7 +3,7 @@ include(FetchContent)
 ######################
 ###  Fetch: itlib  ###
 ######################
-set(ITLIB_VERSION v1.0.5)
+set(ITLIB_VERSION v1.0.6)
 
 FetchContent_Declare(itlib
 GIT_REPOSITORY https://github.com/liturri/itlib.git
