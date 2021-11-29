@@ -11,3 +11,5 @@ target_link_libraries(wxclip PUBLIC ${wxWidgets_LIBRARIES} itlib)
 
 # add_executable(actions actions.cc)
 # target_link_libraries(actions PUBLIC itlib)
+
+install(TARGETS wxclip DESTINATION "/usr/local/bin/")
