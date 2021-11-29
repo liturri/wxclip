@@ -34,7 +34,7 @@ std::string BangActions::Help()
    std::string buff;
    for (const auto &b : actions)
    {
-      buff += b.first + ":\n      " + b.second.description + "\n\n";
+      buff += b.first + ":   " + b.second.description + "\n\n";
    }
    return buff;
 }
@@ -48,12 +48,30 @@ std::string BangActions::words2lines(const std::string str)
    return buff;
 }
 
+std::string BangActions::csv2lines(const std::string str)
+{
+   std::string buff = str;
+   size_t pos;
+   while ((pos = buff.find(",")) != std::string::npos)
+      buff[pos] = '\n';
+   return buff;
+}
+
 std::string BangActions::lines2words(const std::string str)
 {
    std::string buff = str;
    size_t pos;
    while ((pos = buff.find("\n")) != std::string::npos)
       buff[pos] = ' ';
+   return buff;
+}
+
+std::string BangActions::lines2csv(const std::string str)
+{
+   std::string buff = str;
+   size_t pos;
+   while ((pos = buff.find("\n")) != std::string::npos)
+      buff[pos] = ',';
    return buff;
 }
 
@@ -91,6 +109,7 @@ std::string BangActions::title(const std::string str)
    }
    return text;
 }
+
 std::string BangActions::uniq(const std::string str)
 {
    auto lines = strSplit(str, "\n");
