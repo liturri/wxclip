@@ -91,3 +91,9 @@ std::string BangActions::title(const std::string str)
    }
    return text;
 }
+std::string BangActions::uniq(const std::string str)
+{
+   auto lines = strSplit(str, "\n");
+   std::unique(lines.begin(), lines.end());
+   return IterJoin(lines.begin(), lines.end(), "\n");
+}

@@ -31,7 +31,9 @@ protected:
        {"l2w",
         {"Alias de: lines2words", lines2words}},
        {"sort",
-        {"Ordena lineas alfaveticamente", sort}}
+        {"Ordena lineas alfabeticamente", sort}},
+       {"uniq",
+        {"Borra lineas sucesivas repetidas", uniq}}
 
    };
    static std::string words2lines(const std::string str);
@@ -40,6 +42,7 @@ protected:
    static std::string lower(const std::string str);
    static std::string upper(const std::string str);
    static std::string title(const std::string str);
+   static std::string uniq(const std::string str);
 
 public:
    std::string Bang(const std::string &bang, const std::string &str);
