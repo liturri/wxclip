@@ -1,5 +1,6 @@
 #include "actions.hxx"
 #include "str2.hxx"
+#include <algorithm>
 #include <locale>
 
 std::string BangActions::Bang(const std::string &bang, const std::string &str)
